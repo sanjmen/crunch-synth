@@ -7,6 +7,7 @@ from .adaptive_volatility_tracker import AdaptiveVolatilityTracker
 from .student_t_tracker import StudentTTracker
 from .gmm_tracker import GaussianMixtureTracker
 from .quantile_tracker import QuantileMixtureTracker
+from .multi_horizon_router import MultiHorizonMetaEnsemble, HorizonSpecializedSubTracker
 
 __all__ = [
     "GaussianBaselineTracker",
@@ -14,4 +15,6 @@ __all__ = [
     "StudentTTracker",
     "GaussianMixtureTracker",
     "QuantileMixtureTracker",
+    "MultiHorizonMetaEnsemble",
+    "HorizonSpecializedSubTracker",
 ]

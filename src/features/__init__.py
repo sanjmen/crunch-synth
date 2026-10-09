@@ -30,6 +30,11 @@ from .hurst import (
     AssetHurstCalibrator,
 )
 
+from .regime_classifier import (
+    MarketRegime,
+    MarketRegimeClassifier,
+)
+
 __all__ = [
     "ticks_to_ohlc",
     "realized_volatility",
@@ -45,4 +50,6 @@ __all__ = [
     "estimate_hurst_variance_time",
     "estimate_hurst_rs",
     "AssetHurstCalibrator",
+    "MarketRegime",
+    "MarketRegimeClassifier",
 ]
