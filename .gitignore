@@ -1,0 +1,40 @@
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local data & models
+data/
+resources/*.pkl
+resources/*.joblib
+resources/*.onnx
+tmp/
+temp/
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints*/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# CrunchDAO local credentials (keep token private if wanted, or track project.json)
+.crunchdao/token
