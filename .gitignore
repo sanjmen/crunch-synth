@@ -13,11 +13,8 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Local data & models
+# Local data & temporary files
 data/
-resources/*.pkl
-resources/*.joblib
-resources/*.onnx
 tmp/
 temp/
 *.log
@@ -25,16 +22,22 @@ temp/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints*/
 
-# macOS
+# macOS & IDEs
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# IDEs
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# CrunchDAO local credentials (keep token private if wanted, or track project.json)
-.crunchdao/token
+# CrunchDAO local credentials
+.crunchdao/
+
+# CrunchDAO Push Exclusions (Do not upload docs, tests, scripts, research or src to cloud runner)
+docs/
+tests/
+scripts/
+src/
+README.md
+.gitignore
