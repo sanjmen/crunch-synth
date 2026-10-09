@@ -38,7 +38,15 @@ def main():
         print("ERROR: main.py not found!")
         sys.exit(1)
 
-    cmd = ["crunch", "push", "-m", args.message]
+    import shutil
+    crunch_bin = REPO_ROOT / ".venv" / "bin" / "crunch"
+    if not crunch_bin.exists():
+        crunch_bin = shutil.which("crunch")
+    if not crunch_bin:
+        print("ERROR: crunch CLI executable not found!")
+        sys.exit(1)
+
+    cmd = [str(crunch_bin), "push", "-m", args.message]
     if args.dry:
         cmd.append("--dry")
 
