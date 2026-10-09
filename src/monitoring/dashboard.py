@@ -101,7 +101,9 @@ class SynthProductionDashboard:
         Generates formatted terminal report of active production status.
         """
         submissions = self.fetch_submissions()
-        latest_sub = submissions[0] if submissions else None
+        # Sort submissions descending by number so latest is first
+        submissions_sorted = sorted(submissions, key=lambda s: s.get("number", 0), reverse=True)
+        latest_sub = submissions_sorted[0] if submissions_sorted else None
 
         cache_stats = self.price_manager.get_cache_stats()
         cached_count = int(cache_stats["cached"].sum())
